@@ -19,7 +19,6 @@ bot.polling(none_stop=True, interval=0)
       surname = '';
 age = 0;
 @bot.message_handler(content_types=['text'])
-
 def start(message):
     if message.text == '/reg':
         bot.send_message(message.from_user.id, "Как тебя зовут?");
@@ -27,7 +26,6 @@ def start(message):
     else:
         bot.send_message(message.from_user.id, 'Напиши /reg');
 def get_name(message): #получаем фамилию
-
     global name;
     name = message.text;
     bot.send_message(message.from_user.id, 'Какая у тебя фамилия?');
